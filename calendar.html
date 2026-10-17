@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Календарь · My Routine</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7c5cff">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="logo">My Routine</div>
+<a class="nav-link " href="index.html">🏠 Сегодня</a>
+<a class="nav-link " href="tasks.html">✅ Задачи</a>
+<a class="nav-link " href="habits.html">🔁 Привычки</a>
+<a class="nav-link active" href="calendar.html">📅 Календарь</a>
+<a class="nav-link " href="more.html">⚙️ Ещё</a>
+</aside>
+<main class="content">
+<h1 class="page-title">Календарь</h1>
+<p class="page-sub">Отмечай тренировки и смотри активность по месяцам</p>
+
+<div class="card">
+<div class="calendar-head"><button class="nav-btn" onclick="changeMonth(-1)">‹</button><strong id="monthLabel"></strong><button class="nav-btn" onclick="changeMonth(1)">›</button></div>
+<div class="calendar" id="calendar"></div><div class="gym-stats" id="calendarStats" style="margin-top:14px;color:var(--muted);text-align:center"></div>
+<h3>Тип активности на сегодня</h3><div class="workout-types" id="workoutTypes" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+</div>
+<div class="card"><h2>Статистика недели</h2><div class="week-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px"><div class="week-stat" style="background:var(--main-soft);border-radius:14px;padding:12px;text-align:center"><b id="weekWorkouts">0</b><span>тренировок</span></div><div class="week-stat" style="background:var(--main-soft);border-radius:14px;padding:12px;text-align:center"><b id="weekHabits">0%</b><span>привычек</span></div><div class="week-stat" style="background:var(--main-soft);border-radius:14px;padding:12px;text-align:center"><b id="weekTasks">0</b><span>заданий</span></div></div></div>
+
+</main>
+<nav class="bottom-nav">
+<a href="index.html" class=""><span>🏠</span>Сегодня</a>
+<a href="tasks.html" class=""><span>✅</span>Задачи</a>
+<a href="calendar.html" class="active"><span>📅</span>Календарь</a>
+<a href="habits.html" class=""><span>🔁</span>Привычки</a>
+<a href="more.html" class=""><span>⚙️</span>Ещё</a>
+</nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
